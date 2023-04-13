@@ -7,4 +7,21 @@
     <style name="startButtons">
         <item name="android:textSize">25sp</item>
     </style>
+
+    <!--- Options Menu Styles -->
+    <style name="rules">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginLeft">60dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+    </style>
+
+    <style name="bg_color_buttons">
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:onClick">onColorSelected</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
 </resources>
