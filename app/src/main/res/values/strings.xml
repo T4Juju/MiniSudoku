@@ -2,4 +2,7 @@
     <string name="app_name">Mini Sudoku</string>
     <string name="new_game">New Game</string>
     <string name="options_menu_button">Options</string>
+
+
+    <string name="test">TESTING</string>
 </resources>
