@@ -30,6 +30,7 @@
         app:layout_constraintTop_toBottomOf="@id/Title"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:onClick="onNewGameClick"
         />
 
     <Button
@@ -41,6 +42,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newGame"
         app:layout_constraintRight_toRightOf="parent"
+        android:onClick="onOptionsClick"
         />
 
 
