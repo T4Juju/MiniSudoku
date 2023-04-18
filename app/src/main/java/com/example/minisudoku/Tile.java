@@ -197,4 +197,13 @@ public class Tile {
     }
     // -----------------------------------------------------
 
+    public boolean isGameOver(){
+        for(int row=0;row<4;row++){
+            for(int col=0;col<4;col++) {
+                if (isAvailable(grid[row][col], grid[row][col].getDigit()) == false)
+                    return false;
+            }
+        }
+        return true;
+    }
 }
