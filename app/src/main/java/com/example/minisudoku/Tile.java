@@ -81,7 +81,7 @@ public class Tile {
         int count = 0;
         int currDigit = (int) (Math.random() * 4) + 1;
 
-        while (isAvailable(t, currDigit) == false) {
+        while (!isAvailable(t, currDigit)) {
 
             currDigit = (int) (Math.random() * 4) + 1;
             count++;
@@ -195,15 +195,35 @@ public class Tile {
     public void setCol(int col) {
         this.col = col;
     }
+
+    public void setVisible(boolean value){this.visible = value;}
     // -----------------------------------------------------
 
     public boolean isGameOver(){
         for(int row=0;row<4;row++){
             for(int col=0;col<4;col++) {
-                if (isAvailable(grid[row][col], grid[row][col].getDigit()) == false)
+                if (!isAvailable(grid[row][col], grid[row][col].getDigit()))
                     return false;
             }
         }
         return true;
+    }
+
+    public void hideTile(){
+        int hiddenNum;
+        int prevNum;
+        for(int row=0;row<4;row++){
+
+                hiddenNum = (int) (Math.random() * 4) + 1;
+                box[row][hiddenNum].setVisible(false);
+                prevNum = hiddenNum;
+            hiddenNum = (int) (Math.random() * 4) + 1;
+            while(hiddenNum==prevNum){
+                hiddenNum = (int) (Math.random() * 4) + 1;
+            }
+            box[row][hiddenNum].setVisible(false);
+
+
+        }
     }
 }
