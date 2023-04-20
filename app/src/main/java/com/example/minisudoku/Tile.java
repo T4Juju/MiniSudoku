@@ -214,15 +214,17 @@ public class Tile {
         int prevNum;
         for(int row=0;row<4;row++){
 
-                hiddenNum = (int) (Math.random() * 4) + 1;
-                box[row][hiddenNum].setVisible(false);
-                prevNum = hiddenNum;
-            hiddenNum = (int) (Math.random() * 4) + 1;
-            while(hiddenNum==prevNum){
-                hiddenNum = (int) (Math.random() * 4) + 1;
-            }
+            hiddenNum = (int) (Math.random() * 4);
             box[row][hiddenNum].setVisible(false);
+            prevNum = hiddenNum;
 
+
+            hiddenNum = (int) (Math.random() * 4);
+            while(hiddenNum==prevNum){
+                hiddenNum = (int) (Math.random() * 4);
+                box[row][hiddenNum].setVisible(false);
+
+            }
 
         }
     }
