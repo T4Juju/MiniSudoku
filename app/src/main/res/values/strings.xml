@@ -14,5 +14,7 @@
 
     <!--> Game Menu: -->
     <string name="congrats">Congratulations!</string>
+    <string name="optionsButton">Options</string>
+    <string name="startMenu">Home</string>
 
 </resources>
