@@ -16,6 +16,7 @@
     <string name="congrats">Congratulations!</string>
     <string name="optionsButton">Options</string>
     <string name="startMenu">Home</string>
+    <string name="tryAgain">Sorry! That\'s incorrect!</string>
 
     <string name="blank"> </string>
     <string name="num1">1</string>
