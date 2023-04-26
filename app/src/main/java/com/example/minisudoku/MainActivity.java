@@ -248,9 +248,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, OptionsMenu.class);
         startActivity(intent);
     }
-    public void onGameClick(View view){
-        Button button = (Button) findViewById(R.id.imgButton00);
-        button.setText("YA");
+
+
+
+    public void onCheckClick(View view){
+        Button button = (Button)findViewById(R.id.checkButton);
+        isGameOver();
+
+        if (isGameOver()) {
+            Toast.makeText(this, R.string.congrats, Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(this, R.string.tryAgain, Toast.LENGTH_SHORT).show();
+        }
     }
 
 
