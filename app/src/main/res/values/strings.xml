@@ -17,4 +17,10 @@
     <string name="optionsButton">Options</string>
     <string name="startMenu">Home</string>
 
+    <string name="blank"> </string>
+    <string name="num1">1</string>
+    <string name="num2">2</string>
+    <string name="num3">3</string>
+    <string name="num4">4</string>
+
 </resources>

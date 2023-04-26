@@ -1,19 +1,45 @@
 package com.example.minisudoku;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.GridLayout;
+import android.widget.Button;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import java.util.ArrayList;
+import java.util.*;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
+
+    private final int GRID_SIZE = 4;
+    private GridLayout mGridArray;
+
+    int[][] numArray = new int[4][4];
+    String[] numList = new String[5];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        numList[0] = " ";
+        numList[1] = "1";
+        numList[2] = "2";
+        numList[3] = "3";
+        numList[4] = "4";
 
 
-        int[][] numArray = new int[4][4];
+
+
+
 
         // The following objects are only used for the generation of the grid, they will
         // also be used when the game is being played and numbers are changed.
@@ -82,6 +108,8 @@ public class MainActivity extends AppCompatActivity {
                 else
                     System.out.print("* ");
 
+                setButtonText();
+
             }
 
             System.out.println();
@@ -140,6 +168,51 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
+
+    /*public void newGame() {
+        Random randomNumGenerator = new Random();
+        for (int row = 0; row < GRID_SIZE; row++) {
+            for (int col = 0; col < GRID_SIZE; col++) {
+                mGridArray[row][col]= numArray[row][col];
+            }
+        }
+    }*/
+
+    public void setButtonText(){
+        Button button00 = (Button) findViewById(R.id.imgButton00);
+        Button button01 = (Button) findViewById(R.id.imgButton01);
+        String num00 = String.valueOf(STile.grid[0][0].getDigit());
+        String num01 = String.valueOf(STile.grid[0][1].getDigit());
+        button00.setText(num00);
+        button01.setText(num01);
+
+
+
+
+
+
+        //int num = STile.grid[0][0].getDigit();
+            //String num=String.valueOf(STile.grid[0][0].getDigit());
+            //System.out.println("Number is: "+num);
+            //button.setText(num);
+
+
+
+    }
+
+    public void onHomeClick(View view){
+        Intent intent = new Intent(this, StartMenu.class);
+        startActivity(intent);
+    }
+    public void onOptionsClick(View view) {
+        Intent intent = new Intent(this, OptionsMenu.class);
+        startActivity(intent);
+    }
+    public void onGameClick(View view){
+        Button button = (Button) findViewById(R.id.imgButton00);
+        button.setText("YA");
+    }
+
 
 }
 
