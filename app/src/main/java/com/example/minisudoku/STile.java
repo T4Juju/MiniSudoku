@@ -3,7 +3,11 @@ package com.example.minisudoku;
 import java.lang.Math;
 
 public class STile {
-
+    public static final int GRID_SIZE = 4;
+    //private final boolean[][] mLightsGrid;
+    //public SudokuGame() {
+    //    mLightsGrid = new boolean[GRID_SIZE][GRID_SIZE];
+    //}
     public int digit = -1;
     public int group;
     public int position; // Group and position are there to check which tiles are in the same "box"
@@ -35,8 +39,6 @@ public class STile {
         this.position = position;
         this.row = row;
         this.col = col;
-
-
     }
 
     // ------------------------------------------------

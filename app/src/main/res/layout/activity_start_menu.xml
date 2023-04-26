@@ -38,6 +38,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/Options"
         android:text="@string/options_menu_button"
+        android:layout_marginTop="10dp"
         style="@style/startButtons"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newGame"

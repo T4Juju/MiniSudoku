@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartMenu"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textview_rules_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rules_title"
+        android:textSize="32sp"
+        android:layout_margin="50dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textview_rules_1"
+        android:text="@string/rules_1"
+        style="@style/rules"
+        app:layout_constraintTop_toBottomOf="@id/textview_rules_title"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textview_rules_2"
+        android:text="@string/rules_2"
+        style="@style/rules"
+        app:layout_constraintTop_toBottomOf="@id/textview_rules_1"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/backButton"
+        android:text="@string/back"
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="onBackClick"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

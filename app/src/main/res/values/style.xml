@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  Start Menu Styles  -->
     <style name="appName">
         <item name="android:textSize">90sp</item>
         <item name="android:textColor">@color/black</item>
     </style>
     <style name="startButtons">
         <item name="android:textSize">25sp</item>
+        <item name="android:background">@color/dark_green</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <!--- Options Menu Styles -->
@@ -13,31 +16,23 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">10dp</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">25sp</item>
         <item name="android:layout_marginLeft">60dp</item>
         <item name="android:layout_marginRight">15dp</item>
     </style>
 
     <style name="bg_color_buttons">
-        <item name="android:layout_width">200dp</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">100dp</item>
         <item name="android:layout_marginTop">10dp</item>
     </style>
-    <style name="button">
-        <item name="android:layout_width">200dp</item>
-        <item name="android:layout_height">50dp</item>
-        <item name="android:layout_marginTop">10dp</item>
-        <item name="android:fontFamily">serif-monospace</item>
-       <!-- <item name="android:textColor">@color/cyan</item>   -->
-        <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
+
     <style name="Buttons">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:textSize">25sp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/blue</item>
         <item name="android:layout_margin">3dp</item>
 
     </style>
