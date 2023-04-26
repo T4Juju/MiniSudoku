@@ -181,20 +181,60 @@ public class MainActivity extends AppCompatActivity {
     public void setButtonText(){
         Button button00 = (Button) findViewById(R.id.imgButton00);
         Button button01 = (Button) findViewById(R.id.imgButton01);
+        Button button02 = (Button) findViewById(R.id.imgButton02);
+        Button button03 = (Button) findViewById(R.id.imgButton03);
         String num00 = String.valueOf(STile.grid[0][0].getDigit());
         String num01 = String.valueOf(STile.grid[0][1].getDigit());
+        String num02 = String.valueOf(STile.grid[0][2].getDigit());
+        String num03 = String.valueOf(STile.grid[0][3].getDigit());
         button00.setText(num00);
         button01.setText(num01);
+        button02.setText(num02);
+        button03.setText(num03);
+
+        Button button10 = (Button) findViewById(R.id.imgButton10);
+        Button button11 = (Button) findViewById(R.id.imgButton11);
+        Button button12 = (Button) findViewById(R.id.imgButton12);
+        Button button13 = (Button) findViewById(R.id.imgButton13);
+        String num10 = String.valueOf(STile.grid[1][0].getDigit());
+        String num11 = String.valueOf(STile.grid[1][1].getDigit());
+        String num12 = String.valueOf(STile.grid[1][2].getDigit());
+        String num13 = String.valueOf(STile.grid[1][3].getDigit());
+        button10.setText(num10);
+        button11.setText(num11);
+        button12.setText(num12);
+        button13.setText(num13);
+
+        Button button20 = (Button) findViewById(R.id.imgButton20);
+        Button button21 = (Button) findViewById(R.id.imgButton21);
+        Button button22 = (Button) findViewById(R.id.imgButton22);
+        Button button23 = (Button) findViewById(R.id.imgButton23);
+        String num20 = String.valueOf(STile.grid[2][0].getDigit());
+        String num21 = String.valueOf(STile.grid[2][1].getDigit());
+        String num22 = String.valueOf(STile.grid[2][2].getDigit());
+        String num23 = String.valueOf(STile.grid[2][3].getDigit());
+        button20.setText(num20);
+        button21.setText(num21);
+        button22.setText(num22);
+        button23.setText(num23);
+
+        Button button30 = (Button) findViewById(R.id.imgButton30);
+        Button button31 = (Button) findViewById(R.id.imgButton31);
+        Button button32 = (Button) findViewById(R.id.imgButton32);
+        Button button33 = (Button) findViewById(R.id.imgButton33);
+        String num30 = String.valueOf(STile.grid[3][0].getDigit());
+        String num31 = String.valueOf(STile.grid[3][1].getDigit());
+        String num32 = String.valueOf(STile.grid[3][2].getDigit());
+        String num33 = String.valueOf(STile.grid[3][3].getDigit());
+        button30.setText(num30);
+        button31.setText(num31);
+        button32.setText(num32);
+        button33.setText(num33);
 
 
 
 
 
-
-        //int num = STile.grid[0][0].getDigit();
-            //String num=String.valueOf(STile.grid[0][0].getDigit());
-            //System.out.println("Number is: "+num);
-            //button.setText(num);
 
 
 
