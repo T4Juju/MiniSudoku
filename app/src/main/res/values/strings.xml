@@ -11,6 +11,7 @@
     <string name="rules_2">There are 4 squares total, and each square cannot have repeat numbers either.</string>
     <string name="color_button">Change Color</string>
     <string name="choose_color">Choose a Background Color:</string>
+    <string name="back">Back</string>
 
     <!--> Game Menu: -->
     <string name="congrats">Congratulations!</string>

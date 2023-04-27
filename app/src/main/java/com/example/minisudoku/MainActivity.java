@@ -1,5 +1,6 @@
 package com.example.minisudoku;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +8,11 @@ import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import java.util.ArrayList;
@@ -19,6 +25,10 @@ import java.util.Random;
 import android.graphics.Color;
 
 public class MainActivity extends AppCompatActivity {
+
+    private int mLightOnColorId;
+    private int mLightOnColor;
+    private GridLayout mLightGrid;
 
     private final int GRID_SIZE = 4;
     private GridLayout mGridArray;
@@ -52,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mLightOnColor = ContextCompat.getColor(this, R.color.blue);
+        mLightOnColorId = R.color.blue;
+        mLightGrid = findViewById(R.id.grid);
+
 
         numList[0] = " ";
         numList[1] = "1";
@@ -741,6 +755,32 @@ public class MainActivity extends AppCompatActivity {
 
             STile.grid[3][3].setDigit(userInput33);
         }
+    }
+
+    ActivityResultLauncher<Intent> mColorResultLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        Intent data = result.getData();
+                        if (data != null) {
+                            mLightOnColorId = data.getIntExtra(OptionsMenu.EXTRA_COLOR, R.color.blue);
+                            mLightOnColor = ContextCompat.getColor(MainActivity.this, mLightOnColorId);
+                            setButtonColors();
+                        }
+                    }
+                }
+            });
+
+    private void setButtonColors() {
+
+        int count = mLightGrid.getChildCount();
+        for(int i = 0 ; i < count ; i++){
+            View child = mLightGrid.getChildAt(i);
+            child.setBackgroundColor(mLightOnColor);
+        }
+
     }
 
 }
