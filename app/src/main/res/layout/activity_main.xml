@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".MainActivity">
 
-    >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -15,8 +14,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/grid"
-        android:textSize="70sp"
-        />
+        android:textSize="70sp" />
 
     <GridLayout
         android:id="@+id/grid"
@@ -28,8 +26,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-       >
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
             android:id="@+id/imgButton00"
@@ -39,10 +36,8 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/imgButton01"
             app:layout_constraintBottom_toTopOf="@id/imgButton10"
-            android:text="00"
             style="@style/Buttons"
-            android:onClick="onGameClick00"
-            />
+            android:onClick="onGameClick00" />
         <Button
             android:id="@+id/imgButton01"
             android:layout_width="wrap_content"
@@ -51,10 +46,8 @@
             app:layout_constraintLeft_toRightOf="@id/imgButton00"
             app:layout_constraintRight_toLeftOf="@id/imgButton02"
             app:layout_constraintBottom_toTopOf="@id/imgButton11"
-            android:text=" "
             style="@style/Buttons"
-            android:onClick="onGameClick01"
-            />
+            android:onClick="onGameClick01" />
         <Button
             android:id="@+id/imgButton02"
             android:layout_width="wrap_content"
@@ -63,10 +56,8 @@
             app:layout_constraintLeft_toRightOf="@id/imgButton01"
             app:layout_constraintRight_toLeftOf="@id/imgButton03"
             app:layout_constraintBottom_toTopOf="@id/imgButton12"
-            android:text=" "
             style="@style/Buttons"
-            android:onClick="onGameClick02"
-            />
+            android:onClick="onGameClick02" />
         <Button
             android:id="@+id/imgButton03"
             android:layout_width="wrap_content"
@@ -75,10 +66,8 @@
             app:layout_constraintLeft_toRightOf="@id/imgButton02"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toTopOf="@id/imgButton13"
-            android:text=" "
             style="@style/Buttons"
-            android:onClick="onGameClick03"
-            />
+            android:onClick="onGameClick03" />
         <Button
             android:id="@+id/imgButton10"
             android:layout_width="wrap_content"
@@ -87,7 +76,6 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/imgButton11"
             app:layout_constraintBottom_toTopOf="@id/imgButton20"
-            android:text=" "
             android:onClick="onGameClick10"
             style="@style/Buttons"/>
         <Button
@@ -98,10 +86,8 @@
             app:layout_constraintLeft_toRightOf="@id/imgButton10"
             app:layout_constraintRight_toLeftOf="@id/imgButton12"
             app:layout_constraintBottom_toTopOf="@id/imgButton21"
-            android:text=" "
             style="@style/Buttons"
-            android:onClick="onGameClick11"
-            />
+            android:onClick="onGameClick11" />
         <Button
             android:id="@+id/imgButton12"
             android:layout_width="wrap_content"
@@ -110,10 +96,8 @@
             app:layout_constraintLeft_toRightOf="@id/imgButton11"
             app:layout_constraintRight_toLeftOf="@id/imgButton13"
             app:layout_constraintBottom_toTopOf="@id/imgButton22"
-            android:text=" "
             style="@style/Buttons"
-            android:onClick="onGameClick12"
-            />
+            android:onClick="onGameClick12" />
         <Button
             android:id="@+id/imgButton13"
             android:layout_width="wrap_content"
@@ -122,10 +106,8 @@
             app:layout_constraintLeft_toRightOf="@id/imgButton12"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toTopOf="@id/imgButton23"
-            android:text=" "
             style="@style/Buttons"
-            android:onClick="onGameClick13"
-            />
+            android:onClick="onGameClick13" />
         <Button
             android:id="@+id/imgButton20"
             android:layout_width="wrap_content"
@@ -134,10 +116,8 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/imgButton21"
             app:layout_constraintBottom_toTopOf="@id/imgButton30"
-            android:text=" "
             style="@style/Buttons"
-            android:onClick="onGameClick20"
-            />
+            android:onClick="onGameClick20" />
         <Button
             android:id="@+id/imgButton21"
             android:layout_width="wrap_content"
@@ -146,10 +126,8 @@
             app:layout_constraintLeft_toRightOf="@id/imgButton20"
             app:layout_constraintRight_toLeftOf="@id/imgButton22"
             app:layout_constraintBottom_toTopOf="@id/imgButton31"
-            android:text=" "
             style="@style/Buttons"
-            android:onClick="onGameClick21"
-            />
+            android:onClick="onGameClick21" />
         <Button
             android:id="@+id/imgButton22"
             android:layout_width="wrap_content"
@@ -158,10 +136,8 @@
             app:layout_constraintLeft_toRightOf="@id/imgButton21"
             app:layout_constraintRight_toLeftOf="@id/imgButton23"
             app:layout_constraintBottom_toTopOf="@id/imgButton32"
-            android:text=" "
             style="@style/Buttons"
-            android:onClick="onGameClick22"
-            />
+            android:onClick="onGameClick22" />
         <Button
             android:id="@+id/imgButton23"
             android:layout_width="wrap_content"
@@ -170,10 +146,8 @@
             app:layout_constraintLeft_toRightOf="@id/imgButton22"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toTopOf="@id/imgButton33"
-            android:text=" "
             style="@style/Buttons"
-            android:onClick="onGameClick23"
-            />
+            android:onClick="onGameClick23" />
         <Button
             android:id="@+id/imgButton30"
             android:layout_width="wrap_content"
@@ -182,10 +156,8 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/imgButton31"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:text=" "
             style="@style/Buttons"
-            android:onClick="onGameClick30"
-            />
+            android:onClick="onGameClick30" />
         <Button
             android:id="@+id/imgButton31"
             android:layout_width="wrap_content"
@@ -194,7 +166,6 @@
             app:layout_constraintLeft_toRightOf="@id/imgButton30"
             app:layout_constraintRight_toLeftOf="@id/imgButton32"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:text=" "
             style="@style/Buttons"
             android:onClick="onGameClick31"
             />
@@ -206,10 +177,8 @@
             app:layout_constraintLeft_toRightOf="@id/imgButton31"
             app:layout_constraintRight_toLeftOf="@id/imgButton33"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:text=" "
             style="@style/Buttons"
-            android:onClick="onGameClick32"
-            />
+            android:onClick="onGameClick32" />
         <Button
             android:id="@+id/imgButton33"
             android:layout_width="fill_parent"
@@ -218,42 +187,20 @@
             app:layout_constraintLeft_toRightOf="@id/imgButton32"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:text=" "
             style="@style/Buttons"
-            android:onClick="onGameClick33"
-            />
+            android:onClick="onGameClick33" />
     </GridLayout>
 
     <Button
         android:id="@+id/checkButton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Check Game"
+        android:text="@string/checkGame"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/grid"
         app:layout_constraintBottom_toTopOf="@id/startButtonMain"
-        android:onClick="onCheckClick"
-        />
-
-    <Button
-        android:id="@+id/startButtonMain"
-        android:text="@string/startMenu"
-        android:layout_width="205dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:onClick="onHomeClick"/>
-
-        <Button
-            android:id="@+id/optionsButton"
-            android:text="@string/optionsButton"
-            android:layout_width="205dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/startButtonMain"
-            app:layout_constraintRight_toRightOf="parent"
-            android:onClick="onOptionsClick"/>
+        android:onClick="onCheckClick" />
 
     <Button
         android:id="@+id/startButtonMain"
@@ -273,6 +220,9 @@
         app:layout_constraintLeft_toRightOf="@+id/startButtonMain"
         app:layout_constraintRight_toRightOf="parent"
         android:onClick="onOptionsClick"/>
+
+
+
 
 
 

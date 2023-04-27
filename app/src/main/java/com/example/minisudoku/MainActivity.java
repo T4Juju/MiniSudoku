@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
-import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
@@ -15,34 +14,34 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import java.util.ArrayList;
-import java.util.*;
-import android.view.View;
-import android.widget.Button;
-import android.widget.GridLayout;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
-import java.util.Random;
-
-import android.graphics.Color;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    //Code for button colors
     private int mLightOnColorId;
     private int mLightOnColor;
     private GridLayout mLightGrid;
 
-    private final int GRID_SIZE = 4;
-    private GridLayout mGridArray;
+    ActivityResultLauncher<Intent> mColorResultLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        Intent data = result.getData();
+                        if (data != null) {
+                            mLightOnColorId = data.getIntExtra(OptionsMenu.EXTRA_COLOR, R.color.blue);
+                            mLightOnColor = ContextCompat.getColor(MainActivity.this, mLightOnColorId);
+                            setButtonColors();
+                        }
+                    }
+                }
+            });
+
     private final int ORANGE = 0xFFFF3300;
 
+    //Initialize userInputs for game buttons
     public int userInput00=0;
     public int userInput01=0;
     public int userInput02=0;
@@ -61,37 +60,9 @@ public class MainActivity extends AppCompatActivity {
     public int userInput33=0;
 
 
-
-
     int[][] numArray = new int[4][4];
     String[] numList = new String[5];
 
-
-    public void onHomeClick(View view){
-        Intent intent = new Intent(this, StartMenu.class);
-        startActivity(intent);
-    }
-    public void onOptionsClick(View view) {
-        Intent intent = new Intent(this, OptionsMenu.class);
-        intent.putExtra(OptionsMenu.EXTRA_COLOR, mLightOnColorId);
-        mColorResultLauncher.launch(intent);
-    }
-
-    ActivityResultLauncher<Intent> mColorResultLauncher = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),
-            new ActivityResultCallback<ActivityResult>() {
-                @Override
-                public void onActivityResult(ActivityResult result) {
-                    if (result.getResultCode() == Activity.RESULT_OK) {
-                        Intent data = result.getData();
-                        if (data != null) {
-                            mLightOnColorId = data.getIntExtra(OptionsMenu.EXTRA_COLOR, R.color.blue);
-                            mLightOnColor = ContextCompat.getColor(MainActivity.this, mLightOnColorId);
-                            setButtonColors();
-                        }
-                    }
-                }
-            });
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,21 +70,12 @@ public class MainActivity extends AppCompatActivity {
         mLightOnColor = ContextCompat.getColor(this, R.color.blue);
         mLightOnColorId = R.color.blue;
         mLightGrid = findViewById(R.id.grid);
-        mLightOnColor = ContextCompat.getColor(this, R.color.blue);
-        mLightOnColorId = R.color.blue;
-        mLightGrid = findViewById(R.id.grid);
-
 
         numList[0] = " ";
         numList[1] = "1";
         numList[2] = "2";
         numList[3] = "3";
         numList[4] = "4";
-
-
-
-
-
 
         // The following objects are only used for the generation of the grid, they will
         // also be used when the game is being played and numbers are changed.
@@ -155,42 +117,23 @@ public class MainActivity extends AppCompatActivity {
 
         STile.grid[0][0].hideTile();
 
-        // -------------------
-
-        // This code here is just for testing the methods.
-
-        // addToArrays(a);
-        System.out.println("Is game over? " + isGameOver());
-
-        // -------------------
-
         // =========================================================================================
 
         // This next part of the code fills the numArray by calling getGame() from the
         // Tile class.
         // It includes printout statements which will show how the game will look.
 
-        System.out.println();
         for (int row = 0; row < 4; row++) {
             for (int col = 0; col < 4; col++) {
                 if (STile.grid[row][col].getVisible()) {
                     numArray[row][col] = a.getGame(row, col);
                 }
-
-                if (STile.grid[row][col].getVisible())
-                    System.out.print(numArray[row][col] + " ");
-                else
-                    System.out.print("* ");
-
-                setButtonText();
-
+                else {
+                    setButtonText();
+                }
             }
-
-            System.out.println();
         }
-
         // ---------------------------------------------------------------------------------------
-
         // The following for loop sets all the "invisible" tiles on the grid[][] array
         // to 0 so that the isGameOver() method doesn't automatically return true at the
         // beginning of the game
@@ -203,17 +146,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-
-        System.out.println("Is game over? " + isGameOver());
-
-
-
-
-
-
-
-
     }
+
     private void setButtonColors() {
 
         int count = mLightGrid.getChildCount();
@@ -221,9 +155,7 @@ public class MainActivity extends AppCompatActivity {
             View child = mLightGrid.getChildAt(i);
             child.setBackgroundColor(mLightOnColor);
         }
-
     }
-
 
 // =============================================================================================
 
@@ -238,29 +170,20 @@ public class MainActivity extends AppCompatActivity {
             for (int col = 0; col < 4; col++) {
 
                 if (!aaa.isValid(STile.grid[row][col], STile.grid[row][col].getDigit())) {
-
                     return false;
                 }
 
-                if (STile.grid[row][col].getDigit() == 0) { // if the number is equal to 0 that means that the user has
+                if (STile.grid[row][col].getDigit() == 0) {
+                    // if the number is equal to 0 that means that the user has
                     // not chosen a number.
                     return false;
                 }
-
             }
         }
         return true;
     }
 
-    /*public void newGame() {
-        Random randomNumGenerator = new Random();
-        for (int row = 0; row < GRID_SIZE; row++) {
-            for (int col = 0; col < GRID_SIZE; col++) {
-                mGridArray[row][col]= numArray[row][col];
-            }
-        }
-    }*/
-
+    //Set the text for each button by row
     public void setButtonText(){
         Button button00 = (Button) findViewById(R.id.imgButton00);
         Button button01 = (Button) findViewById(R.id.imgButton01);
@@ -362,45 +285,11 @@ public class MainActivity extends AppCompatActivity {
             button33.setTextColor(ORANGE);
         }
 
-
-
-
-
-
-
-
-    }
-
-    public void onHomeClick(View view){
-        Intent intent = new Intent(this, StartMenu.class);
-        startActivity(intent);
-    }
-    public void onOptionsClick(View view) {
-        Intent intent = new Intent(this, OptionsMenu.class);
-        startActivity(intent);
-    }
-
-
-
-    public void onCheckClick(View view){
-        Button button = (Button)findViewById(R.id.checkButton);
-        //isGameOver();
-
-        if (isGameOver()) {
-            Toast.makeText(this, R.string.congrats, Toast.LENGTH_SHORT).show();
-            System.out.println("congrats");
-        }
-        else {
-            Toast.makeText(this, R.string.tryAgain, Toast.LENGTH_SHORT).show();
-            System.out.println("try again");
-        }
     }
 
     //=========================================================================================
-    // On game click methods below:
+    // On game click methods below
     //=========================================================================================
-
-
     public void onGameClick00(View view){
         if(!STile.grid[0][0].getVisible()) {
 
@@ -432,7 +321,6 @@ public class MainActivity extends AppCompatActivity {
                 userInput01++;
             }
             else userInput01=0;
-
 
             Button button = (Button) findViewById(R.id.imgButton01);
             if(userInput01==0)
@@ -803,36 +691,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    ActivityResultLauncher<Intent> mColorResultLauncher = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),
-            new ActivityResultCallback<ActivityResult>() {
-                @Override
-                public void onActivityResult(ActivityResult result) {
-                    if (result.getResultCode() == Activity.RESULT_OK) {
-                        Intent data = result.getData();
-                        if (data != null) {
-                            mLightOnColorId = data.getIntExtra(OptionsMenu.EXTRA_COLOR, R.color.blue);
-                            mLightOnColor = ContextCompat.getColor(MainActivity.this, mLightOnColorId);
-                            setButtonColors();
-                        }
-                    }
-                }
-            });
+    public void onCheckClick(View view){
 
-    private void setButtonColors() {
-
-        int count = mLightGrid.getChildCount();
-        for(int i = 0 ; i < count ; i++){
-            View child = mLightGrid.getChildAt(i);
-            child.setBackgroundColor(mLightOnColor);
+        if (isGameOver()) {
+            Toast.makeText(MainActivity.this, R.string.congrats, Toast.LENGTH_SHORT).show();
         }
-
+        else {
+            Toast.makeText(MainActivity.this, R.string.tryAgain, Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void onHomeClick(View view){
+        Intent intent = new Intent(this, StartMenu.class);
+        startActivity(intent);
     }
 
-
-
-
-
-
+    public void onOptionsClick(View view) {
+        Intent intent = new Intent(this, OptionsMenu.class);
+        intent.putExtra(OptionsMenu.EXTRA_COLOR, mLightOnColorId);
+        mColorResultLauncher.launch(intent);
+    }
 }
 

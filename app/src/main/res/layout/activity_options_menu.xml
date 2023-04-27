@@ -7,7 +7,6 @@
     tools:context=".StartMenu"
     android:background="@color/white">
 
-
     <TextView
         android:id="@+id/textview_choose_color"
         android:layout_width="match_parent"
@@ -24,42 +23,33 @@
         android:layout_margin="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_choose_color"
-        >
+        app:layout_constraintTop_toBottomOf="@id/textview_choose_color">
 
         <RadioButton android:id="@+id/radio_blue"
             style="@style/bg_color_buttons"
             android:background="@color/blue"
             android:onClick="onColorSelected"/>
-            />
 
         <RadioButton android:id="@+id/radio_green"
             style="@style/bg_color_buttons"
             android:background="@color/green"
             android:onClick="onColorSelected"/>
-            />
 
         <RadioButton android:id="@+id/radio_yellow"
             style="@style/bg_color_buttons"
             android:background="@color/yellow"
             android:onClick="onColorSelected"/>
-            />
 
         <RadioButton android:id="@+id/radio_pink"
             style="@style/bg_color_buttons"
             android:background="@color/pink"
             android:onClick="onColorSelected"/>
-            />
 
         <RadioButton android:id="@+id/radio_purple"
             style="@style/bg_color_buttons"
             android:background="@color/purple_200"
             android:onClick="onColorSelected"/>
-            />
+
     </RadioGroup>
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 

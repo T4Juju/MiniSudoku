@@ -1,22 +1,13 @@
 package com.example.minisudoku;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class OptionsMenu extends AppCompatActivity {
-
-
 
     public static final String EXTRA_COLOR = "com.example.minisudoku.color";
     @Override
@@ -62,7 +53,6 @@ public class OptionsMenu extends AppCompatActivity {
         } else if (view.getId() == R.id.radio_yellow) {
             colorId = R.color.yellow;
         }
-
 
         Intent intent = new Intent();
         intent.putExtra(EXTRA_COLOR, colorId);
