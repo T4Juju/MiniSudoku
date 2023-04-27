@@ -24,7 +24,24 @@ public class MainActivity extends AppCompatActivity {
     private GridLayout mGridArray;
     private final int ORANGE = 0xFFFF3300;
 
-    public int userInput=0;
+    public int userInput00=0;
+    public int userInput01=0;
+    public int userInput02=0;
+    public int userInput03=0;
+    public int userInput10=0;
+    public int userInput11=0;
+    public int userInput12=0;
+    public int userInput13=0;
+    public int userInput20=0;
+    public int userInput21=0;
+    public int userInput22=0;
+    public int userInput23=0;
+    public int userInput30=0;
+    public int userInput31=0;
+    public int userInput32=0;
+    public int userInput33=0;
+
+
 
 
     int[][] numArray = new int[4][4];
@@ -327,99 +344,99 @@ public class MainActivity extends AppCompatActivity {
     public void onGameClick00(View view){
         if(!STile.grid[0][0].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput00<4){
+                userInput00++;
             }
-            else userInput=0;
+            else userInput00=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton00);
-            if(userInput==0)
+            if(userInput00==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput00==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput00==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput00==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput00==4)
                 button.setText("4");
 
-            STile.grid[0][0].setDigit(userInput);
+            STile.grid[0][0].setDigit(userInput00);
         }
     }
     public void onGameClick01(View view){
         if(!STile.grid[0][1].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput01<4){
+                userInput01++;
             }
-            else userInput=0;
+            else userInput01=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton01);
-            if(userInput==0)
+            if(userInput01==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput01==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput01==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput01==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput01==4)
                 button.setText("4");
 
-            STile.grid[0][1].setDigit(userInput);
+            STile.grid[0][1].setDigit(userInput01);
         }
     }
 
     public void onGameClick02(View view){
         if(!STile.grid[0][2].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput02<4){
+                userInput02++;
             }
-            else userInput=0;
+            else userInput02=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton02);
-            if(userInput==0)
+            if(userInput02==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput02==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput02==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput02==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput02==4)
                 button.setText("4");
 
-            STile.grid[0][2].setDigit(userInput);
+            STile.grid[0][2].setDigit(userInput02);
         }
     }
 
     public void onGameClick03(View view){
         if(!STile.grid[0][3].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput03<4){
+                userInput03++;
             }
-            else userInput=0;
+            else userInput03=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton03);
-            if(userInput==0)
+            if(userInput03==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput03==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput03==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput03==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput03==4)
                 button.setText("4");
 
-            STile.grid[0][3].setDigit(userInput);
+            STile.grid[0][3].setDigit(userInput03);
         }
     }
 
@@ -428,99 +445,99 @@ public class MainActivity extends AppCompatActivity {
     public void onGameClick10(View view){
         if(!STile.grid[1][0].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput10<4){
+                userInput10++;
             }
-            else userInput=0;
+            else userInput10=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton10);
-            if(userInput==0)
+            if(userInput10==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput10==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput10==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput10==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput10==4)
                 button.setText("4");
 
-            STile.grid[1][0].setDigit(userInput);
+            STile.grid[1][0].setDigit(userInput10);
         }
     }
     public void onGameClick11(View view){
         if(!STile.grid[1][1].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput11<4){
+                userInput11++;
             }
-            else userInput=0;
+            else userInput11=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton11);
-            if(userInput==0)
+            if(userInput11==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput11==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput11==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput11==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput11==4)
                 button.setText("4");
 
-            STile.grid[1][1].setDigit(userInput);
+            STile.grid[1][1].setDigit(userInput11);
         }
     }
 
     public void onGameClick12(View view){
         if(!STile.grid[1][2].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput12<4){
+                userInput12++;
             }
-            else userInput=0;
+            else userInput12=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton12);
-            if(userInput==0)
+            if(userInput12==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput12==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput12==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput12==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput12==4)
                 button.setText("4");
 
-            STile.grid[1][2].setDigit(userInput);
+            STile.grid[1][2].setDigit(userInput12);
         }
     }
 
     public void onGameClick13(View view){
         if(!STile.grid[1][3].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput13<4){
+                userInput13++;
             }
-            else userInput=0;
+            else userInput13=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton13);
-            if(userInput==0)
+            if(userInput13==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput13==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput13==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput13==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput13==4)
                 button.setText("4");
 
-            STile.grid[1][3].setDigit(userInput);
+            STile.grid[1][3].setDigit(userInput13);
         }
     }
 
@@ -529,99 +546,99 @@ public class MainActivity extends AppCompatActivity {
     public void onGameClick20(View view){
         if(!STile.grid[2][0].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput20<4){
+                userInput20++;
             }
-            else userInput=0;
+            else userInput20=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton20);
-            if(userInput==0)
+            if(userInput20==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput20==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput20==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput20==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput20==4)
                 button.setText("4");
 
-            STile.grid[2][0].setDigit(userInput);
+            STile.grid[2][0].setDigit(userInput20);
         }
     }
     public void onGameClick21(View view){
         if(!STile.grid[2][1].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput21<4){
+                userInput21++;
             }
-            else userInput=0;
+            else userInput21=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton21);
-            if(userInput==0)
+            if(userInput21==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput21==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput21==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput21==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput21==4)
                 button.setText("4");
 
-            STile.grid[2][1].setDigit(userInput);
+            STile.grid[2][1].setDigit(userInput21);
         }
     }
 
     public void onGameClick22(View view){
         if(!STile.grid[2][2].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput22<4){
+                userInput22++;
             }
-            else userInput=0;
+            else userInput22=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton22);
-            if(userInput==0)
+            if(userInput22==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput22==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput22==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput22==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput22==4)
                 button.setText("4");
 
-            STile.grid[2][2].setDigit(userInput);
+            STile.grid[2][2].setDigit(userInput22);
         }
     }
 
     public void onGameClick23(View view){
         if(!STile.grid[2][3].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput23<4){
+                userInput23++;
             }
-            else userInput=0;
+            else userInput23=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton23);
-            if(userInput==0)
+            if(userInput23==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput23==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput23==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput23==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput23==4)
                 button.setText("4");
 
-            STile.grid[2][3].setDigit(userInput);
+            STile.grid[2][3].setDigit(userInput23);
         }
     }
 
@@ -630,99 +647,99 @@ public class MainActivity extends AppCompatActivity {
     public void onGameClick30(View view){
         if(!STile.grid[3][0].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput30<4){
+                userInput30++;
             }
-            else userInput=0;
+            else userInput30=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton30);
-            if(userInput==0)
+            if(userInput30==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput30==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput30==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput30==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput30==4)
                 button.setText("4");
 
-            STile.grid[3][0].setDigit(userInput);
+            STile.grid[3][0].setDigit(userInput30);
         }
     }
     public void onGameClick31(View view){
         if(!STile.grid[3][1].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput31<4){
+                userInput31++;
             }
-            else userInput=0;
+            else userInput31=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton31);
-            if(userInput==0)
+            if(userInput31==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput31==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput31==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput31==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput31==4)
                 button.setText("4");
 
-            STile.grid[3][1].setDigit(userInput);
+            STile.grid[3][1].setDigit(userInput31);
         }
     }
 
     public void onGameClick32(View view){
         if(!STile.grid[3][2].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput32<4){
+                userInput32++;
             }
-            else userInput=0;
+            else userInput32=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton32);
-            if(userInput==0)
+            if(userInput32==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput32==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput32==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput32==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput32==4)
                 button.setText("4");
 
-            STile.grid[3][2].setDigit(userInput);
+            STile.grid[3][2].setDigit(userInput32);
         }
     }
 
     public void onGameClick33(View view){
         if(!STile.grid[3][3].getVisible()) {
 
-            if(userInput<4){
-                userInput++;
+            if(userInput33<4){
+                userInput33++;
             }
-            else userInput=0;
+            else userInput33=0;
 
 
             Button button = (Button) findViewById(R.id.imgButton33);
-            if(userInput==0)
+            if(userInput33==0)
                 button.setText(" ");
-            else if(userInput==1)
+            else if(userInput33==1)
                 button.setText("1");
-            else if(userInput==2)
+            else if(userInput33==2)
                 button.setText("2");
-            else if(userInput==3)
+            else if(userInput33==3)
                 button.setText("3");
-            else if(userInput==4)
+            else if(userInput33==4)
                 button.setText("4");
 
-            STile.grid[3][3].setDigit(userInput);
+            STile.grid[3][3].setDigit(userInput33);
         }
     }
 
