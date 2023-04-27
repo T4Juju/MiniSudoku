@@ -20,7 +20,7 @@ public class StartMenu extends AppCompatActivity {
         startActivity(intent);
     }
     public void onOptionsClick(View view) {
-        Intent intent = new Intent(this, OptionsMenu.class);
+        Intent intent = new Intent(this, InstructionMenu.class);
         startActivity(intent);
     }
 

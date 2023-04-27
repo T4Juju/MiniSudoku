@@ -14,12 +14,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:text="@string/choose_color"
-        android:textSize="25sp"
+        android:textSize="35sp"
         app:layout_constraintTop_toTopOf="parent" />   <!-- will change to top nav bar when implemented -->
 
     <RadioGroup
         android:id="@+id/rdGroup_color"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,52 +30,35 @@
         <RadioButton android:id="@+id/radio_blue"
             style="@style/bg_color_buttons"
             android:background="@color/blue"
+            android:onClick="onColorSelected"/>
             />
 
         <RadioButton android:id="@+id/radio_green"
             style="@style/bg_color_buttons"
             android:background="@color/green"
+            android:onClick="onColorSelected"/>
             />
 
         <RadioButton android:id="@+id/radio_yellow"
             style="@style/bg_color_buttons"
             android:background="@color/yellow"
+            android:onClick="onColorSelected"/>
             />
 
         <RadioButton android:id="@+id/radio_pink"
             style="@style/bg_color_buttons"
             android:background="@color/pink"
+            android:onClick="onColorSelected"/>
             />
 
         <RadioButton android:id="@+id/radio_purple"
             style="@style/bg_color_buttons"
             android:background="@color/purple_200"
+            android:onClick="onColorSelected"/>
             />
     </RadioGroup>
 
-    <TextView
-        android:id="@+id/textview_rules_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/rules_title"
-        android:textSize="32sp"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="60dp"
-        app:layout_constraintTop_toBottomOf="@id/rdGroup_color"
-        />
-    <TextView
-        android:id="@+id/textview_rules_1"
-        android:text="@string/rules_1"
-        style="@style/rules"
-        app:layout_constraintTop_toBottomOf="@id/textview_rules_title"
-        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textview_rules_2"
-        android:text="@string/rules_2"
-        style="@style/rules"
-        app:layout_constraintTop_toBottomOf="@id/textview_rules_1"
-        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

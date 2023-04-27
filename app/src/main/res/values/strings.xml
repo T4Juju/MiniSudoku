@@ -9,12 +9,16 @@
     <string name="rules_title">Rules: </string>
     <string name="rules_1">A 4x4 square must be filled with the numbers 1-4 with no repeated numbers in each line, horizontally or vertically.</string>
     <string name="rules_2">There are 4 squares total, and each square cannot have repeat numbers either.</string>
+    <string name="choose_color">Change Grid Color:</string>
     <string name="color_button">Change Color</string>
     <string name="choose_color">Choose a Background Color:</string>
     <string name="back">Back</string>
 
     <!--> Game Menu: -->
     <string name="congrats">Congratulations!</string>
+    <string name="optionsButton">Options</string>
+    <string name="startMenu">Home</string>
+    <string name="back">Back</string>
     <string name="optionsButton">Options</string>
     <string name="startMenu">Home</string>
     <string name="tryAgain">Sorry! That\'s incorrect!</string>

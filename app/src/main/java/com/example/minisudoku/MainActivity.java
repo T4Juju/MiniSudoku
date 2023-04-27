@@ -17,14 +17,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import java.util.ArrayList;
 import java.util.*;
+import android.view.View;
+import android.widget.Button;
+import android.widget.GridLayout;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import java.util.Random;
 
 import android.graphics.Color;
 
 public class MainActivity extends AppCompatActivity {
+
 
     private int mLightOnColorId;
     private int mLightOnColor;
@@ -58,10 +67,38 @@ public class MainActivity extends AppCompatActivity {
     String[] numList = new String[5];
 
 
+    public void onHomeClick(View view){
+        Intent intent = new Intent(this, StartMenu.class);
+        startActivity(intent);
+    }
+    public void onOptionsClick(View view) {
+        Intent intent = new Intent(this, OptionsMenu.class);
+        intent.putExtra(OptionsMenu.EXTRA_COLOR, mLightOnColorId);
+        mColorResultLauncher.launch(intent);
+    }
+
+    ActivityResultLauncher<Intent> mColorResultLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        Intent data = result.getData();
+                        if (data != null) {
+                            mLightOnColorId = data.getIntExtra(OptionsMenu.EXTRA_COLOR, R.color.blue);
+                            mLightOnColor = ContextCompat.getColor(MainActivity.this, mLightOnColorId);
+                            setButtonColors();
+                        }
+                    }
+                }
+            });
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mLightOnColor = ContextCompat.getColor(this, R.color.blue);
+        mLightOnColorId = R.color.blue;
+        mLightGrid = findViewById(R.id.grid);
         mLightOnColor = ContextCompat.getColor(this, R.color.blue);
         mLightOnColorId = R.color.blue;
         mLightGrid = findViewById(R.id.grid);
@@ -175,6 +212,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+    }
+    private void setButtonColors() {
+
+        int count = mLightGrid.getChildCount();
+        for(int i = 0 ; i < count ; i++){
+            View child = mLightGrid.getChildAt(i);
+            child.setBackgroundColor(mLightOnColor);
+        }
 
     }
 
@@ -782,6 +828,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
+
+
+
 
 }
 
