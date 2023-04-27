@@ -11,7 +11,7 @@ public class STile {
     public int row;
     public int col; // row and col are the actual rows and columns on the sudoku board
 
-    public boolean visible;// this will be used to decide which tiles are hidden on the game board.
+    public boolean visible=true;// this will be used to decide which tiles are hidden on the game board.
 
     public static STile[][] grid = new STile[4][4];
     public static STile[][] box = new STile[4][4];
